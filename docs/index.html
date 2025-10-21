@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dnd Portal • AUDX Dev</title>
   <meta name="description" content="Select game links and useful resources for our D&D group." />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.webp" type="image/webp" />
   <style>
     :root{
       /* theme: dark greys + orange accents */
@@ -18,7 +18,9 @@
     body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;color:var(--fg);background:linear-gradient(180deg,var(--panel-2),var(--bg)) fixed}
     .wrap{max-width:var(--max);margin:0 auto;padding:40px 18px 72px}
     header{border-radius:var(--radius);background:radial-gradient(1200px 300px at 50% -120px,rgba(249,115,22,.14),transparent 60%),var(--panel);border:1px solid rgba(255,255,255,.04);box-shadow:var(--shadow);padding:28px 24px;display:flex;align-items:center;gap:16px}
-    .logo{width:48px;height:48px;border-radius:12px;background:conic-gradient(from 30deg at 50% 50%,var(--accent),var(--accent-2),var(--accent));box-shadow:0 10px 24px rgba(249,115,22,.22)}
+    /* logo is the favicon image shown left of the title */
+    .logo{width:48px;height:48px;border-radius:10px;overflow:hidden;flex:0 0 48px;display:block;box-shadow:0 8px 20px rgba(0,0,0,.35)}
+    .logo img{width:100%;height:100%;object-fit:cover;display:block}
     h1{margin:0;font-size:28px}
     .lead{margin:4px 0 0;color:var(--muted)}
 
@@ -53,7 +55,7 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="logo" aria-hidden="true"></div>
+      <div class="logo"><img src="favicon.webp" alt="Dnd Portal logo" width="48" height="48" /></div>
       <div>
         <h1>Dnd Portal</h1>
         <p class="lead">Select Game and useful links.</p>
