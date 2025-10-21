@@ -5,29 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dnd Portal • AUDX Dev</title>
   <meta name="description" content="Select game links and useful resources for our D&D group." />
-  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <style>
     :root{
-      --bg:#0e1017; --panel:#151928; --panel-2:#0f1322; --fg:#e8ecf2; --muted:#a2acbb; --accent:#7dd3fc; --accent-2:#60a5fa;
-      --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.35);
+      /* theme: dark greys + orange accents */
+      --bg:#0c0d10; --panel:#131315; --panel-2:#0b0b0d; --fg:#efeae6; --muted:#bdb8b4;
+      --accent:#fb923c; --accent-2:#f97316;
+      --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.45);
       --max:860px;
     }
     *{box-sizing:border-box}
     body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;color:var(--fg);background:linear-gradient(180deg,var(--panel-2),var(--bg)) fixed}
     .wrap{max-width:var(--max);margin:0 auto;padding:40px 18px 72px}
-    header{border-radius:var(--radius);background:radial-gradient(1200px 300px at 50% -120px,rgba(96,165,250,.25),transparent 60%),var(--panel);border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);padding:28px 24px;display:flex;align-items:center;gap:16px}
-    .logo{width:48px;height:48px;border-radius:12px;background:conic-gradient(from 30deg at 50% 50%,var(--accent),var(--accent-2),var(--accent));box-shadow:0 10px 24px rgba(96,165,250,.35)}
+    header{border-radius:var(--radius);background:radial-gradient(1200px 300px at 50% -120px,rgba(249,115,22,.14),transparent 60%),var(--panel);border:1px solid rgba(255,255,255,.04);box-shadow:var(--shadow);padding:28px 24px;display:flex;align-items:center;gap:16px}
+    .logo{width:48px;height:48px;border-radius:12px;background:conic-gradient(from 30deg at 50% 50%,var(--accent),var(--accent-2),var(--accent));box-shadow:0 10px 24px rgba(249,115,22,.22)}
     h1{margin:0;font-size:28px}
     .lead{margin:4px 0 0;color:var(--muted)}
 
     main{margin-top:22px;display:grid;gap:18px}
-    section{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+    section{background:var(--panel);border:1px solid rgba(255,255,255,.04);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
     section h2{margin:0 0 10px 0;font-size:20px}
 
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-    .btn{display:block;text-decoration:none;color:var(--fg);padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.12);text-align:center;transition:transform .15s ease, border-color .15s ease, background .15s ease}
+    .btn{display:block;text-decoration:none;color:var(--fg);padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.06);text-align:center;transition:transform .15s ease, border-color .15s ease, background .15s ease}
     .btn:hover{transform:translateY(-1px)}
-    .btn.accent{border-color:transparent;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1020;font-weight:600}
+    /* filled (primary) buttons use the orange accent */
+    .btn.filled{border-color:transparent;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b0b0d;font-weight:700;box-shadow:0 8px 18px rgba(249,115,22,.14)}
+    .btn.filled.sm{padding:10px 12px;border-radius:10px;font-size:14px}
 
     ul{margin:8px 0 0 18px;padding:0}
     li{margin:6px 0}
@@ -37,11 +41,12 @@
     .note{opacity:.85}
 
     @media (prefers-color-scheme: light){
-      :root{--bg:#f5f7fb;--panel:#ffffff;--panel-2:#e9eef9;--fg:#0b1020;--muted:#556070}
-      body{background:linear-gradient(180deg,#eef3ff,#f9fbff)}
+      :root{--bg:#f7f6f4;--panel:#ffffff;--panel-2:#f2efe9;--fg:#0b0b0d;--muted:#6b6764}
+      body{background:linear-gradient(180deg,#fbf6f1,#fffaf6)}
       header{border-color:rgba(0,0,0,.06)}
       section{border-color:rgba(0,0,0,.06)}
-      .btn{border-color:rgba(0,0,0,.12)}
+      .btn{border-color:rgba(0,0,0,.08);color:var(--fg)}
+      .btn.filled{color:#fff}
     }
   </style>
 </head>
